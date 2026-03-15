@@ -1,6 +1,8 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbzbg-3oWBEdSZpu7fBhGnMlZTgMuhcA20aKRBgMVz7z_FuM1XhZCIKExMszs1vCnD3UJA/exec"
 
-document.getElementById("form").addEventListener("submit", e => {
+const form = document.getElementById("form")
+
+form.addEventListener("submit", e => {
 
 e.preventDefault()
 
@@ -13,11 +15,27 @@ emergencia: document.getElementById("emergencia").value,
 telEmergencia: document.getElementById("telEmergencia").value
 }
 
-fetch(scriptURL,{
-method:"POST",
-body:JSON.stringify(data)
+fetch(scriptURL, {
+method: "POST",
+body: JSON.stringify(data),
+headers: {
+"Content-Type": "application/json"
+}
 })
-.then(res => alert("Cadastro enviado com sucesso"))
-.catch(err => alert("Erro ao enviar"))
+.then(response => response.text())
+.then(result => {
+
+alert("Cadastro enviado com sucesso!")
+
+form.reset()
+
+})
+.catch(error => {
+
+alert("Erro ao enviar cadastro")
+
+console.error("Erro:", error)
+
+})
 
 })
