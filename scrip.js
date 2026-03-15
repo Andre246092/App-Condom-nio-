@@ -1,4 +1,4 @@
-const scriptURL = https://script.google.com/macros/s/AKfycbzbg-3oWBEdSZpu7fBhGnMlZTgMuhcA20aKRBgMVz7z_FuM1XhZCIKExMszs1vCnD3UJA/exec
+const scriptURL = "https://script.google.com/macros/s/AKfycbzbg-3oWBEdSZpu7fBhGnMlZTgMuhcA20aKRBgMVz7z_FuM1XhZCIKExMszs1vCnD3UJA/exec"
 
 document.getElementById("form").addEventListener("submit", e => {
 
