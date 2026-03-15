@@ -21,24 +21,3 @@ body:JSON.stringify(data)
 .catch(err => alert("Erro ao enviar"))
 
 })
-
-//EXTENCOES// 
-
-function doPost(e){
-
-var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet()
-
-var data = JSON.parse(e.postData.contents)
-
-sheet.appendRow([
-data.apto,
-data.nome,
-data.telefone,
-data.email,
-data.emergencia,
-data.telEmergencia,
-new Date()
-])
-
-return ContentService.createTextOutput("ok")
-}
