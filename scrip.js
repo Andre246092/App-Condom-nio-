@@ -11,6 +11,7 @@ const formData = new FormData(form)
 fetch(scriptURL, {
 method: "POST",
 body: formData
+mode: "no-cors"
 })
 .then(response => response.text())
 .then(() => {
