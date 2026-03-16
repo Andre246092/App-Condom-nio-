@@ -13,7 +13,6 @@ method: "POST",
 body: formData,
 mode: "no-cors"
 })
-.then(response => response.text())
 .then(() => {
 
 alert("Cadastro enviado com sucesso")
