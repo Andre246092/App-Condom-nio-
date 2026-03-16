@@ -10,7 +10,7 @@ const formData = new FormData(form)
 
 fetch(scriptURL, {
 method: "POST",
-body: formData
+body: formData,
 mode: "no-cors"
 })
 .then(response => response.text())
