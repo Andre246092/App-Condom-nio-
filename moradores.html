@@ -3,11 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <title>Cadastro de Moradores</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Ficha de Moradores</h2>
+<div class="container">
+
+<h2>Cadastro de Moradores</h2>
 
 <form action="https://script.google.com/macros/s/AKfycbypDWV-viQPJlSXBz1J65JcR872Z_EKrSJrgFPCsAdZCwou1kSmlXlRX3JrlG-EiGLz/exec"
 method="POST"
@@ -26,21 +91,25 @@ onsubmit="enviado()">
 <label>Email</label>
 <input type="text" name="email">
 
-<label>Emergência</label>
+<label>Contato de Emergência</label>
 <input type="text" name="emergencia">
 
-<label>Tel Emergência</label>
+<label>Telefone de Emergência</label>
 <input type="text" name="telEmergencia">
 
-<button type="submit">Enviar</button>
+<button type="submit">Enviar Cadastro</button>
 
 </form>
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+</div>
 
 <script>
 function enviado(){
   alert("Cadastro enviado com sucesso!");
 }
 </script>
-  
+
+</body>
+</html>
