@@ -1,30 +1,23 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbypDWV-viQPJlSXBz1J65JcR872Z_EKrSJrgFPCsAdZCwou1kSmlXlRX3JrlG-EiGLz/exec"
+document.addEventListener("DOMContentLoaded", function(){
 
-const form = document.getElementById("form")
+const scriptURL = "https://script.google.com/macros/s/AKfycbypDWV-viQPJlSXBz1J65JcR872Z_EKrSJrgFPCsAdZCwou1kSmlXlRX3JrlG-EiGLz/exec";
 
-form.addEventListener("submit", e => {
+const form = document.getElementById("form");
 
-e.preventDefault()
+form.addEventListener("submit", function(e){
 
-const formData = new FormData(form)
+e.preventDefault();
 
 fetch(scriptURL, {
 method: "POST",
-body: formData,
+body: new FormData(form),
 mode: "no-cors"
-})
-.then(() => {
+});
 
-alert("Cadastro enviado com sucesso")
+alert("Cadastro enviado com sucesso!");
 
-form.reset()
+form.reset();
 
-})
-.catch(error => {
+});
 
-console.error(error)
-alert("Erro ao enviar cadastro")
-
-})
-
-})
+});
