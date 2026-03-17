@@ -9,29 +9,31 @@
 
 <h2>Ficha de Moradores</h2>
 
-<form action="https://script.google.com/macros/s/AKfycbypDWV-viQPJlSXBz1J65JcR872Z_EKrSJrgFPCsAdZCwou1kSmlXlRX3JrlG-EiGLz/exec" method="POST">
+<form action="https://script.google.com/macros/s/AKfycbypDWV-viQPJlSXBz1J65JcR872Z_EKrSJrgFPCsAdZCwou1kSmlXlRX3JrlG-EiGLz/exec"
+method="POST"
+target="hidden_iframe"
+onsubmit="enviado()">
 
 <label>Apartamento</label>
-<input type="text" name="apto" required><br><br>
+<input type="text" name="apto" required>
 
 <label>Nome</label>
-<input type="text" name="nome" required><br><br>
+<input type="text" name="nome" required>
 
 <label>Telefone</label>
-<input type="text" name="telefone"><br><br>
+<input type="text" name="telefone">
 
 <label>Email</label>
-<input type="text" name="email"><br><br>
+<input type="text" name="email">
 
 <label>Emergência</label>
-<input type="text" name="emergencia"><br><br>
+<input type="text" name="emergencia">
 
 <label>Tel Emergência</label>
-<input type="text" name="telEmergencia"><br><br>
+<input type="text" name="telEmergencia">
 
 <button type="submit">Enviar</button>
 
 </form>
 
-</body>
-</html>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
